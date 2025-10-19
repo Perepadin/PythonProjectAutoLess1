@@ -7,15 +7,15 @@ class Http_method:
 
     @staticmethod
     def custom_get_method(url):
-        result = requests.get(url, headers=Http_method.headers, cookie=Http_method.cookie)
+        result = requests.get(url, headers=Http_method.headers)
         return result
 
     def custom_post_method(url,body):
-        result = requests.post(url, json=body, headers=Http_method.headers, cookie=Http_method.cookie)
+        result = requests.post(url, json=body, headers=Http_method.headers)
         return result
 
     def custom_put_method(url,body):
-        result = requests.put(url, json=body, headers=Http_method.headers, cookie=Http_method.cookie)
+        result = requests.put(url, json=body, headers=Http_method.headers)
         return result
 
     def custom_delete_method(url,body):
