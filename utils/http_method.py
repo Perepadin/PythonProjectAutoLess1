@@ -3,6 +3,9 @@ import requests
 """Список HTTP методов"""
 class Http_method:
     headers = {'Contetn-Tyep': 'application/json'}
+    headers_for_test = {
+    "x-api-key": "reqres-free-v1"
+}
     cookie = ''
 
     @staticmethod
@@ -21,3 +24,11 @@ class Http_method:
     def custom_delete_method(url,body):
         result = requests.delete(url, json=body, headers=Http_method.headers, cookie=Http_method.cookie)
         return result
+
+    def custom_put_method_for_test(url, body):
+        result = requests.put(url, json=body, headers=Http_method.headers)
+        return result
+
+    # def update_test_location(url, body):
+    #     result = requests.put(url, json=body, headers=Http_method.headers)
+    #     return result

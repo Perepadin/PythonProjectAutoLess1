@@ -62,3 +62,31 @@ class Google_Maps_Api():
         result_put = Http_method.custom_put_method(Put_url, json_for_update_location)
         print(result_put.text)
         return result_put
+
+
+    # def update_test_location(self):
+    #     url = 'https://petstore.swagger.io/v2/pet'
+    #     print(url)
+    #     json_put = [
+    #         {
+    #             "id": 1,
+    #             "category": {
+    #                 "id": 1,
+    #                 "name": "Bobik"
+    #             },
+    #             "name": "doggie",
+    #             "photoUrls": [
+    #                 "string"
+    #             ],
+    #             "tags": [
+    #                 {
+    #                     "id": "1",
+    #                     "name": "Bob"
+    #                 }
+    #             ],
+    #             "status": "available"
+    #         }
+    #     ]
+    #     result_test_put = Http_method.update_test_location(url, json_put)
+    #     print(result_test_put.text)
+    #     return result_test_put

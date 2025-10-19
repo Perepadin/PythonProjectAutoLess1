@@ -4,6 +4,7 @@ from utils.API import Google_Maps_Api
 
 """Создание / изменение / удаление новой локации"""
 class Test_create_place():
+
     def test_create_new_place(self):
 
         print('Метод POST')
@@ -14,7 +15,7 @@ class Test_create_place():
         place_id = check_post.get("place_id")
 
 
-        print('Метод GET')
+        print('Метод GET после POST')
         resulst_get = Google_Maps_Api.get_new_place(place_id)
 
         print('Метод PUT')
@@ -22,3 +23,6 @@ class Test_create_place():
 
         print('Метод GET после PUT')
         resulst_get = Google_Maps_Api.get_new_place(place_id)
+
+        # print('Метод PUT Для теста')
+        # resulst_put_test= Google_Maps_Api.update_test_location(self)
