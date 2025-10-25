@@ -25,3 +25,22 @@ class Cheking():
         assert list(token) == expected_value
         print('Все поля на месте')
 
+    """"Метод для проверки значения полей"""
+
+    @staticmethod
+    def chek_json_value(response: Response, field_name, expected_value):
+        chek_value = response.json()
+        chek_info = chek_value.get(field_name)
+        assert chek_info == expected_value
+        print(field_name + ' совпадает с эталоном')
+
+        """"Метод для проверки значения по заданному слову"""
+
+    @staticmethod
+    def check_json_search_word_in_value(response: Response, field_name, search_word):
+        chek_value = response.json()
+        chek_info = chek_value.get(field_name)
+        if search_word in chek_info:
+            print('Слово =' + search_word + ' есть в ответе')
+        else:
+            print('Слово =' + search_word + ' отсутствует в ответе')

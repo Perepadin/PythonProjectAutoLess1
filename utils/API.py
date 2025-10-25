@@ -56,7 +56,7 @@ class Google_Maps_Api():
         json_for_update_location = \
             {
                 "place_id": place_id,
-                "address": "777 Lenina street, RU",
+                "address": "211 Chapova street, RU",
                 "key": "qaclick123"
             }
         result_put = Http_method.custom_put_method(Put_url, json_for_update_location)
