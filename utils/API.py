@@ -63,6 +63,29 @@ class Google_Maps_Api():
         print(result_put.text)
         return result_put
 
+    """метод для удаления новой локации через DELETE"""
+    @staticmethod
+    def delete_new_location(place_id):
+
+        delete_resource_url = '/maps/api/place/delete/json'  # приставка для всех DELETE запросов
+        delete_url = base_url + delete_resource_url + key
+        print(delete_url)
+        json_for_delete_location = \
+            {
+                "place_id": place_id
+            }
+        result_delete = Http_method.custom_delete_method(delete_url, json_for_delete_location)
+        print(result_delete.text)
+        return result_delete
+
+
+
+
+
+
+
+
+
 
     # def update_test_location(self):
     #     url = 'https://petstore.swagger.io/v2/pet'
@@ -90,3 +113,5 @@ class Google_Maps_Api():
     #     result_test_put = Http_method.update_test_location(url, json_put)
     #     print(result_test_put.text)
     #     return result_test_put
+
+

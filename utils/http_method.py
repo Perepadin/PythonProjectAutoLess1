@@ -22,7 +22,7 @@ class Http_method:
         return result
 
     def custom_delete_method(url,body):
-        result = requests.delete(url, json=body, headers=Http_method.headers, cookie=Http_method.cookie)
+        result = requests.delete(url, json=body, headers=Http_method.headers)
         return result
 
     def custom_put_method_for_test(url, body):
